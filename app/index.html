@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Multiplayer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/multiplayer.css">
+  </head>
+  <body>
+    <script>
+      window.MultiplayerENV = {{ENV}};
+      window.EmberENV = window.MultiplayerENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/multiplayer.js"></script>
+    <script>
+      window.Multiplayer = require('multiplayer/app')['default'].create(MultiplayerENV.APP);
+    </script>
+  </body>
+</html>
